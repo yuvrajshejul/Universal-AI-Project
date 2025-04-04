@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Example</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .chat-container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 700px;
+            max-width: 100%;
+            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .chat-header {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .chat-body {
+            padding: 30px;
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .user-message, .bot-message {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .user-message {
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            padding: 15px;
+            border-radius: 15px;
+            max-width: 80%;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+            font-size: 16px;
+
+        }
+
+        .user-message .message-bubble {
+            background-color: #4CAF50; /* Green */
+            align-self: flex-end;
+            border: 1px solid #388E3C;
+            color: white;
+        }
+
+        .bot-message .message-bubble {
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            align-self: flex-start;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 0 30px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 16px;
+            color: #333;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px;
+            margin-right:10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Chatbot</div>
+        <div class="chat-body" id="chatBody">
+            <div class="bot-message message-bubble">Hello! Type something to start the conversation.</div>
+        </div>
+        <div class="user-message">
+            <input type="text" id="userInput" placeholder="Type your message..." autofocus>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Add the following script tag at the end of the body -->
+    <script>
+        async function sendMessage() {
+            var userInput = document.getElementById('userInput').value;
+    
+            // Display user message with a different background color and shape
+            var userMessage = '<div class="user-message message-bubble" style="background-color: #2196F3; border-radius: 15px 15px 15px 0; width: calc(80% -20px);text-align: right;">' + userInput + '</div>';
+            document.getElementById('chatBody').innerHTML += userMessage;
+    
+            // Request AI response from server
+            var response = await fetch('/generate_response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'user_input=' + encodeURIComponent(userInput), // Encode user input
+            });
+    
+            var responseData = await response.json();
+    
+            // Display AI response with a different background color and shape
+            var aiMessage = '<div class="bot-message message-bubble" style="background-color: #4CAF50; border-radius: 15px 15px 0 15px; width: calc(100% - 40px);">' + responseData.bot_response + '</div>';
+            document.getElementById('chatBody').innerHTML += aiMessage;
+    
+            // Clear the input field
+            document.getElementById('userInput').value = '';
+    
+            // Scroll to the bottom of the chat
+            var chatBody = document.getElementById('chatBody');
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    </script>
+</body>
+</html>

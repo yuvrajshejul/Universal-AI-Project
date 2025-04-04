@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schemes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #FFE797; /* Saffron theme */
+        }
+        .card {
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px;
+            transition: transform 0.3s;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card-content {
+            padding: 20px;
+            color: #495057;
+        }
+        h2 {
+            color: #FFA500; /* Saffron color */
+            margin-bottom: 10px;
+        }
+        p {
+            color: #6c757d;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<h1>SCHEMES</h1>
+
+<div class="card">
+    <div class="card-content">
+        <h2>Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)</h2>
+        <p>Ayushman Bharat PMJAY is a health insurance scheme that aims to provide financial protection to over 100 million families for secondary and tertiary care hospitalization.</p>
+        <a href="{{ url_for('scheme1') }}">Learn more</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+        <h2>National Health Mission (NHM)</h2>
+        <p>NHM aims to provide accessible, affordable, and quality healthcare to rural population, especially women and children.</p>
+        <a href="{{ url_for('scheme2') }}">Learn more</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-content">
+        <h2>Pradhan Mantri Matru Vandana Yojana (PMMVY)</h2>
+        <p>PMMVY is a maternity benefit program that provides cash incentives to pregnant and lactating women.</p>
+        <a href="{{ url_for('scheme3') }}">Learn more</a>
+    </div>
+</div>
+<div class="card">
+    <div class="card-content">
+        <h2>Rashtriya Swasthya Bima Yojana (RSBY)</h2>
+        <p>RSBY is a health insurance scheme for below-poverty-line (BPL) families, providing coverage for hospitalization expenses.</p>
+        <a href="{{ url_for('scheme4') }}">Learn more</a>
+    </div>
+</div>
+
+<!-- Add more cards as needed -->
+
+</body>
+</html>

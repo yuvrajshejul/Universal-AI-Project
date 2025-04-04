@@ -1,0 +1,366 @@
+{
+    "data": [
+        
+        {
+          "disease": "Common Cold",
+          "symptoms": ["Runny nose", "Sneezing", "Cough", "Sore throat"],
+          "ayurvedic_home_remedies": [
+            "Ginger tea with honey",
+            "Tulsi (holy basil) tea",
+            "Steam inhalation with eucalyptus oil",
+            "Warm saltwater gargle"
+          ]
+        },
+        {
+          "disease": "Headache",
+          "symptoms": ["Pain or discomfort in the head"],
+          "ayurvedic_home_remedies": [
+            "Peppermint oil application on temples",
+            "Clove oil massage on forehead",
+            "Brahmi (Gotu Kola) tea",
+            "Amla (Indian gooseberry) powder with water"
+          ]
+        },
+        {
+          "disease": "Indigestion",
+          "symptoms": ["Bloating", "Heartburn", "Nausea"],
+          "ayurvedic_home_remedies": [
+            "Cumin (jeera) tea",
+            "Ginger and fennel seed decoction",
+            "Mint leaves with honey",
+            "Ajwain (carom seeds) with warm water"
+          ]
+        },
+        {
+          "disease": "Insomnia",
+          "symptoms": ["Difficulty falling asleep", "Difficulty staying asleep"],
+          "ayurvedic_home_remedies": [
+            "Warm milk with a pinch of nutmeg",
+            "Chamomile tea",
+            "Ashwagandha powder with warm water",
+            "Almond and saffron paste with warm milk"
+          ]
+        },
+        {
+          "disease": "Acne",
+          "symptoms": ["Pimples", "Blackheads", "Whiteheads"],
+          "ayurvedic_home_remedies": [
+            "Neem leaf paste",
+            "Turmeric and sandalwood face mask",
+            "Aloe vera gel application",
+            "Basil (Tulsi) face wash"
+          ]
+        },
+        {
+          "disease": "Stress",
+          "symptoms": ["Anxiety", "Tension", "Restlessness"],
+          "ayurvedic_home_remedies": [
+            "Brahmi (Gotu Kola) capsules",
+            "Chamomile tea",
+            "Ashwagandha powder with warm milk",
+            "Deep breathing exercises"
+          ]
+        },
+        {
+          "disease": "Hypertension",
+          "symptoms": ["High blood pressure", "Headache", "Dizziness"],
+          "ayurvedic_home_remedies": [
+            "Arjuna bark powder with water",
+            "Garlic and honey mixture",
+            "Hawthorn tea",
+            "Yoga and meditation"
+          ]
+        },
+        {
+          "disease": "Allergies",
+          "symptoms": ["Sneezing", "Runny or stuffy nose", "Itchy or watery eyes"],
+          "ayurvedic_home_remedies": [
+            "Nettle tea",
+            "Turmeric and honey mixture",
+            "Triphala powder with warm water",
+            "Steam inhalation with mint leaves"
+          ]
+        },
+        {
+          "disease": "Gastritis",
+          "symptoms": ["Stomach pain", "Indigestion", "Nausea"],
+          "ayurvedic_home_remedies": [
+            "Licorice tea",
+            "Ginger and honey paste",
+            "Fennel seed decoction",
+            "Coconut water"
+          ]
+        },
+        {
+          "disease": "Muscle Strain",
+          "symptoms": ["Muscle pain", "Swelling", "Limited range of motion"],
+          "ayurvedic_home_remedies": [
+            "Turmeric milk",
+            "Epsom salt bath",
+            "Ajwain (carom seeds) poultice",
+            "Massage with sesame oil"
+          ]
+        },
+        {
+          "disease": "Migraine",
+          "symptoms": ["Throbbing pain", "Sensitivity to light and sound", "Nausea"],
+          "ayurvedic_home_remedies": [
+            "Peppermint oil application on temples",
+            "Ginger tea with lemon",
+            "Brahmi (Gotu Kola) capsules",
+            "Yoga and meditation"
+          ]
+        },
+        {
+          "disease": "Diarrhea",
+          "symptoms": ["Frequent loose or watery stools", "Abdominal cramps"],
+          "ayurvedic_home_remedies": [
+            "Banana and curd smoothie",
+            "Fenugreek seed tea",
+            "Pomegranate juice",
+            "Cumin (jeera) powder with buttermilk"
+          ]
+        },
+        {
+          "disease": "Arthritis",
+          "symptoms": ["Joint pain", "Swelling", "Stiffness"],
+          "ayurvedic_home_remedies": [
+            "Turmeric paste with warm milk",
+            "Ginger and cinnamon tea",
+            "Fenugreek seed poultice",
+            "Mustard oil massage"
+          ]
+        },
+        {
+          "disease": "Cough",
+          "symptoms": ["Persistent cough", "Phlegm", "Chest discomfort"],
+          "ayurvedic_home_remedies": [
+            "Honey and ginger tea",
+            "Turmeric milk",
+            "Licorice root tea",
+            "Holy basil (Tulsi) leaves with honey"
+          ]
+        },
+        {
+          "disease": "Constipation",
+          "symptoms": ["Infrequent bowel movements", "Difficulty passing stool"],
+          "ayurvedic_home_remedies": [
+            "Warm water with lemon",
+            "Triphala powder with honey",
+            "Figs soaked in water overnight",
+            "Castor oil with warm milk"
+          ]
+        },
+        {
+          "disease": "Sunburn",
+          "symptoms": ["Red and painful skin", "Blisters", "Swelling"],
+          "ayurvedic_home_remedies": [
+            "Aloe vera gel application",
+            "Cucumber slices on the affected area",
+            "Coconut oil with turmeric",
+            "Sandalwood paste"
+          ]
+        },
+        {
+          "disease": "Ear Infection",
+          "symptoms": ["Ear pain", "Discharge from the ear", "Hearing loss"],
+          "ayurvedic_home_remedies": [
+            "Warm garlic oil drops",
+            "Basil (Tulsi) oil application",
+            "Neem oil with sesame oil",
+            "Onion juice with honey"
+          ]
+        },
+        {
+          "disease": "Urinary Tract Infection (UTI)",
+          "symptoms": ["Frequent urination", "Burning sensation", "Cloudy urine"],
+          "ayurvedic_home_remedies": [
+            "Cranberry juice",
+            "Coriander seed tea",
+            "Coconut water",
+            "Triphala powder with water"
+          ]
+        },
+        {
+          "disease": "Fever",
+          "symptoms": ["High body temperature", "Chills", "Body aches"],
+          "ayurvedic_home_remedies": [
+            "Tulsi (holy basil) tea",
+            "Coriander seed decoction",
+            "Fenugreek seed tea",
+            "Ginger and honey paste"
+          ]
+        },
+        {
+          "disease": "Dandruff",
+          "symptoms": ["Flaky scalp", "Itching", "White or yellowish scales"],
+          "ayurvedic_home_remedies": [
+            "Neem oil massage",
+            "Fenugreek seed paste",
+            "Amla (Indian gooseberry) powder with coconut oil",
+            "Yogurt and lemon hair mask"
+          ]
+        },
+        {
+          "disease": "Anemia",
+          "symptoms": ["Fatigue", "Weakness", "Pale skin"],
+          "ayurvedic_home_remedies": [
+            "Beetroot and carrot juice",
+            "Jaggery with sesame seeds",
+            "Spinach and fenugreek leaves soup",
+            "Pomegranate and amla (Indian gooseberry) smoothie"
+          ]
+        },
+        {
+          "disease": "Irritable Bowel Syndrome (IBS)",
+          "symptoms": ["Abdominal pain", "Bloating", "Changes in bowel habits"],
+          "ayurvedic_home_remedies": [
+            "Fennel seed tea",
+            "Peppermint oil capsules",
+            "Aloe vera juice",
+            "Coriander seed decoction"
+          ]
+        },
+        {
+          "disease": "Eczema",
+          "symptoms": ["Itchy and inflamed skin", "Redness", "Dry patches"],
+          "ayurvedic_home_remedies": [
+            "Coconut oil with turmeric",
+            "Neem leaf paste",
+            "Aloe vera gel application",
+            "Chamomile tea"
+          ]
+        },
+        {
+          "disease": "Hemorrhoids",
+          "symptoms": ["Swelling around the anus", "Bleeding during bowel movements", "Itching"],
+          "ayurvedic_home_remedies": [
+            "Triphala powder with warm water",
+            "Sitz bath with Epsom salt",
+            "Aloe vera gel application",
+            "Radish paste with honey"
+          ]
+        },
+        {
+          "disease": "Osteoporosis",
+          "symptoms": ["Bone pain", "Fractures", "Loss of height over time"],
+          "ayurvedic_home_remedies": [
+            "Calcium-rich foods (milk, sesame seeds)",
+            "Sun exposure for vitamin D",
+            "Ashwagandha powder with warm milk",
+            "Weight-bearing exercises"
+          ]
+        },
+        {
+          "disease": "Varicose Veins",
+          "symptoms": ["Veins that are swollen and twisted", "Aching pain", "Heaviness in the legs"],
+          "ayurvedic_home_remedies": [
+            "Horse chestnut seed extract",
+            "Ginkgo biloba supplements",
+            "Witch hazel compress",
+            "Leg elevation and exercise"
+          ]
+        },
+        {
+          "disease": "Tonsillitis",
+          "symptoms": ["Sore throat", "Swollen tonsils", "Difficulty swallowing"],
+          "ayurvedic_home_remedies": [
+            "Licorice root tea",
+            "Turmeric and honey paste",
+            "Saltwater gargle",
+            "Holy basil (Tulsi) leaves with honey"
+          ]
+        },
+        {
+          "disease": "Rheumatoid Arthritis",
+          "symptoms": ["Joint pain", "Swelling", "Morning stiffness"],
+          "ayurvedic_home_remedies": [
+            "Turmeric paste with warm milk",
+            "Ginger and cinnamon tea",
+            "Triphala powder with honey",
+            "Mustard oil massage"
+          ]
+        },
+        {
+          "disease": "Vertigo",
+          "symptoms": ["Dizziness", "Nausea", "Balance problems"],
+          "ayurvedic_home_remedies": [
+            "Ginger tea",
+            "Coriander seed decoction",
+            "Brahmi (Gotu Kola) tea",
+            "Yoga and meditation"
+          ]
+        },
+        {
+          "disease": "Dry Skin",
+          "symptoms": ["Flaky or rough skin", "Itching", "Redness"],
+          "ayurvedic_home_remedies": [
+            "Coconut oil massage",
+            "Olive oil and honey mask",
+            "Aloe vera gel application",
+            "Sesame oil with turmeric"
+          ]
+        },
+        {
+          "disease": "Gallstones",
+          "symptoms": ["Pain in the upper abdomen", "Nausea", "Vomiting"],
+          "ayurvedic_home_remedies": [
+            "Dandelion root tea",
+            "Milk thistle supplements",
+            "Apple cider vinegar with water",
+            "Radish juice with honey"
+          ]
+        },
+        {
+          "disease": "Psoriasis",
+          "symptoms": ["Red, itchy, and scaly skin", "Thickened or pitted nails"],
+          "ayurvedic_home_remedies": [
+            "Turmeric and neem paste",
+            "Aloe vera gel application",
+            "Dead Sea salt bath",
+            "Guggul supplements"
+          ]
+        },
+        {
+          "disease": "Gout",
+          "symptoms": ["Severe joint pain", "Swelling", "Redness"],
+          "ayurvedic_home_remedies": [
+            "Cherry juice",
+            "Ginger tea",
+            "Nettle tea",
+            "Apple cider vinegar with water"
+          ]
+        },
+        {
+          "disease": "Cystitis",
+          "symptoms": ["Frequent urination", "Pain or burning during urination", "Cloudy urine"],
+          "ayurvedic_home_remedies": [
+            "Cranberry juice",
+            "Coriander seed decoction",
+            "Coconut water",
+            "Triphala powder with water"
+          ]
+        },
+        {
+          "disease": "Impaired Memory",
+          "symptoms": ["Forgetfulness", "Difficulty concentrating"],
+          "ayurvedic_home_remedies": [
+            "Brahmi (Gotu Kola) capsules",
+            "Almond and saffron paste with milk",
+            "Rosemary essential oil",
+            "Yoga and meditation"
+          ]
+        },
+        {
+          "disease": "Rosacea",
+          "symptoms": ["Facial redness", "Swollen red bumps", "Eye irritation"],
+          "ayurvedic_home_remedies": [
+            "Green tea compress",
+            "Aloe vera gel application",
+            "Chamomile tea",
+            "Neem leaf paste"
+          ]
+        }
+    ]
+  }
+  

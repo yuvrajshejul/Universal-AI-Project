@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearest Hospitals</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFE797; /* Saffron theme */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            width: 800px;
+            height:50%;
+            margin: 20px;
+        }
+
+        .heading {
+            color: black; /* Saffron color */
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px;
+            transition: transform 0.3s;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-content {
+            padding: 20px;
+            color: #495057;
+        }
+
+        h2 {
+            color: #FFA500; /* Saffron color */
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .map-container {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        #map_np, #map1 {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="heading">Nearest Hospitals</h1>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Shree Life Care </h2>
+            <p>Satprishi Mala, Opposite to Bus Stand, Kopargaon, India, Maharashtra</p>
+            <p>Contact: 98513 51398</p>
+            <div class="map-container">
+                <div id="map_np"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Kothari Hospital - Private Hospital</h2>
+            <p>AHMED NAGAR MAHARASHTRA Barvga Siva Je Road,
+Kopargaon - 423601,
+Maharashtra</p>
+            <p>Contact: 9988556644</p>
+            <div class="map-container">
+                <div id="map1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more cards as needed -->
+
+</div>
+
+<script>
+    function initMap() {
+        const hospitalALocation = { lat: 19.885093029610985, lng: 74.47987169594454 }; // Replace with actual coordinates
+        const hospitalBLocation = { lat: 37.7750, lng: -122.4194 }; // Replace with actual coordinates
+
+        const mapOptions = {
+            center: hospitalBLocation,
+            zoom: 15,
+        };
+
+        try {
+            const map_np = new google.maps.Map(document.getElementById("map_np"), mapOptions);
+            const map1 = new google.maps.Map(document.getElementById("map1"), mapOptions);
+
+            new google.maps.Marker({
+                position: hospitalALocation,
+                map: map_np,
+                title: "Hospital A",
+            });
+
+            new google.maps.Marker({
+                position: hospitalBLocation,
+                map: map1,
+                title: "Hospital B",
+            });
+        } catch (error) {
+            console.error("Error initializing Google Maps:", error);
+        }
+    }
+</script>
+
+<script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9OSv4Ib3CP3MdBoZmiJEtCrLgQiS5XE&callback=initMap"> <!-- Replace with your Google Maps API key -->
+</script>
+
+</body>
+</html>

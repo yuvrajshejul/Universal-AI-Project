@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheme Information</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFE797; /* Saffron theme */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        .scheme-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .scheme-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .scheme-details {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="scheme-container">
+        <img src="{{url_for('static',filename='uploads/ayush.webp')}}" alt="Scheme Image" class="scheme-image">
+
+        <div class="scheme-details">
+            <h1>Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)</h1>
+            <p><strong>Description:</strong> Ayushman Bharat PMJAY is a health insurance scheme that aims to provide financial protection to over 100 million families for secondary and tertiary care hospitalization.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Cashless coverage for medical expenses.</li>
+                <li>Coverage for pre-existing diseases from day one.</li>
+                <li>Beneficiary can avail services in any empaneled hospital across India.</li>
+                <!-- Add more features as needed -->
+            </ul>
+
+            <h2>Eligibility Criteria</h2>
+            <ul>
+                <li>Socio-economic caste census (SECC) based identification.</li>
+                <li>Families listed in SECC database.</li>
+
+                <!-- Add more eligibility criteria as needed -->
+            </ul>
+
+            <p><strong><h2>Application Process:</h2></strong> Interested individuals can apply online through the official website or visit the nearest Common Service Center (CSC).</p>
+
+            <p><strong><h2>Contact Information:</h2></strong> For more details, contact us at <a href="tel:+91-11-2374 3086 ">+91-11-2374 3086 </a> or <a href="pmjay-info@gov.in">pmjay-info@gov.in</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

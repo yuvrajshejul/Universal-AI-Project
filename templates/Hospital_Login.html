@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Login</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #F08080, #CD5C5C); /* New gradient theme */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 25px; /* Round shape */
+            outline: none; /* Remove default outline */
+        }
+
+        button {
+            background-color: #FF6347; /* New button color */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #D2691E; /* New hover color */
+        }
+
+        .register-button {
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Hospital Login</h2>
+
+        <form action="login_process.php" method="post">
+            <input type="text" name="ID" placeholder="Hospital ID" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="{{ url_for('hospit_reg')}}" class="register-button">Not registered? Register here.</a>
+    </div>
+
+</body>
+</html>

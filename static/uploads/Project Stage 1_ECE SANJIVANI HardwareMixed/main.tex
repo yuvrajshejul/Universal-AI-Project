@@ -1,0 +1,782 @@
+\documentclass[12pt]{report}	%Document Class Specification
+
+\setlength{\textwidth}{6.25in} % original 6.25 %Text Length Setup
+\setlength{\textheight}{8in}
+
+\renewcommand{\baselinestretch}{1.3}	%Page Margin Setup
+\oddsidemargin 20pt    %  Left margin on odd-numbered pages.
+\evensidemargin 20pt   %  Note that \oddsidemargin = \evensidemargin
+\topmargin 0pt
+
+% for border
+\usepackage{fancybox}
+\usepackage{pslatex}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{fancybox}
+\usepackage{pslatex}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{sectsty}
+\chapterfont{\Large\sc\centering}
+\chaptertitlefont{\centering}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[labelfont=bf]{caption}
+
+
+% Define Packages
+\usepackage{graphics}
+\usepackage{longtable}
+\usepackage{array}
+%\usepackage[table]{xcolor}
+\usepackage{epsfig}
+\usepackage{listing}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{fancybox}
+\usepackage{xcolor}
+\usepackage[left=3.50cm,top=2.47cm,right=2.55cm,bottom=3.175cm]{geometry}
+\usepackage{pdfpages}
+%\usepackage{listings}
+%\usepackage[font=normalsize,labelfont=bf]{caption}
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+\usepackage[titles]{tocloft}
+\setlength{\cftbeforechapskip}{4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Change Font Size Of Titles
+%\titleformat{\chapter}[display]
+  %{\normalfont\large\bfseries\centering}{\chaptertitlename\ \thechapter}{14pt}{\large}
+%\titleformat{\section}{\normalsize \bfseries}{\thesection}{1em}{}
+%\titleformat{\subsection}{\normalsize \bfseries}{\thesubsection}{1em}{}
+\titleformat{\chapter}[display]{\normalfont\centering\fontsize{16}{19}\bfseries}{\chaptertitlename\ \thechapter}{1em}{}
+
+\titleformat{\section}{\normalfont\fontsize{14}{17}\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}{\normalfont\fontsize{12}{14}\bfseries}{\thesubsection}{1em}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Begin document "environment".
+
+\begin{document}
+\fancypage{\setlength{\fboxsep}{20pt}\doublebox}{}
+%Rename "Bibliography" to "References"
+\renewcommand\bibname{References} 
+%For the header and footer
+\fancypagestyle{plain}{%
+%\fancyfoot[L]{\emph{Department of Electronics and Computer Science, Sanjivani College of Engineering, Kopargaon}} % except the center
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+}
+\pagestyle{fancy}
+%\rhead{\emph{Student
+%%}}
+\lhead{}
+%%\fancyfoot[LO,LE]{\emph{Department of Electronics and Computer Engineering,  Sanjivani College of Engineering, Kopargaon.}}
+\cfoot{}
+\fancyfoot[RO, RE]{\thepage}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+
+
+% Settingup fancybox border
+\fancypage{\setlength{\fboxsep}{10pt}\doublebox}{}
+%Rename "Bibliography" to "References"
+\renewcommand\bibname{References} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%Title Page
+\begin{titlepage}
+\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox }{}
+\vspace*{0.1in}
+\begin{center}
+            {\bf SAVITRIBAI PHULE PUNE UNIVERSITY,PUNE}\\
+           {\bf A}\\
+		{ \bf PROJECT STAGE-I REPORT ON}\\
+		%{ \bf {REPORT ON}}\\
+\vspace{0.1in}
+{\Large \bf \textcolor{red}{``Name of Project''}}
+		\\
+\vspace{0.1in}
+{ \bf SUBMITTED TOWARDS THE}\\
+{ \bf  PARTIAL FULFILLMENT OF THE AWARD OF THE DEGREE OF }\\
+{ \bf BACHELOR OF TECHNOLOGY (ECE ENGINEERING)}\\
+{{\bf BY}}\\
+\end{center} 
+  
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+{{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER1}}} &  & {{\color[HTML]{58429B} \textbf{{[}PRN{]}}}} \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER2}}                          &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR.  GROUP MEMBER3}}                       &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER4}}                  &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                    
+\end{tabular}
+\end{table}
+
+\textbf{\textcolor{violet}{\hspace{7.07cm}}}
+
+		\begin{center}
+		%\vspace{0.1in}  
+		%{\bf \textcolor{red}{(BEIT)}}\\       
+		%\vspace{0.1in}
+		{\bf{UNDER THE GUIDANCE OF}}\\
+		\vspace{0.1in}
+		{\large \bf \textcolor{red}{GUIDE NAME }}\\
+		%\vspace{0.1in}
+		{\large \bf \textcolor{red}{CO GUIDE NAME }}\\
+		%\vspace{0.1in}
+		\begin{figure}[h]
+		\begin{center}
+         \includegraphics[width=4cm, height=4cm]{logo.png}\\
+		\end{center}
+		%\centerline{\psfig{figure=logo.jpg,hight=5}}
+		\label{atcres}
+		\end{figure}
+		%\vspace{0.1in}
+		{\bf { Department of Electronics and Computer Engineering}}\\
+		{ \bf SANJIVANI COLLEGE OF ENGINEERING }\\
+		{\bf  KOPARGAON-423603}\\
+		{\bf  (AN AUTONOMOUS INSTITUTE)}\\
+		{\bf 2023-2024}
+		\end{center}
+		%\hspace*{5.0in}\bf \textcolor{black}{[43/2023-2024]}
+		
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%==================================collagevision&mission.tex===============================
+%
+\newpage
+\newenvironment{SANJIVANI COLLEGE OF ENGINEERING, KOPARGAON}
+\thispagestyle{empty}
+\begin{center}
+\vspace*{50pt}
+\Large
+\textbf{SANJIVANI COLLEGE OF ENGINEERING,KOPARGAON}\\
+\end{center}
+\thispagestyle{empty}
+
+\subsection*           {INSTITUTE VISION}
+To Develop World Class Professionals through Quality Education.
+\subsection*           {INSTITUTE MISSION}
+To create Academic Excellence in the field of Engineering and Management through Education, Training and Research to improve quality of life of people.
+\subsection*           {QUALITY POLICY}
+We are committed to provide quality education in the field of 
+engineering and management as per the norms of affiliating and accrediting authorities.
+We shall achieve this through continual improvement in quality of teaching learning process, research and development. We shall strive to achieve satisfaction of students and society.
+%
+\newpage
+\newenvironment{DEPARTMENT OF  ELECTRONICS AND COMPUTER ENGINEERING}
+\thispagestyle{empty}
+\begin{center}
+\vspace*{50pt}
+\textbf{DEPARTMENT OF  ELECTRONICS AND COMPUTER ENGINEERING}\\
+\end{center}
+\thispagestyle{empty}
+\subsection*{VISION}
+To produce quality professionals in the field of Electronics and Computer Engineering with knowledge and skill sets to meet diversifying needs of industry and society.
+\subsection*{MISSION}
+\begin{itemize}
+    \item M1-To impart the technology of Electronics and Computer Engineering through effective teaching-learning process. 
+    \item M2-To establish linkages between industry and academia for overall development of students.  
+    \item M3-To promote innovative ideas in solving multi-disciplinary engineering problems having social relevance.
+    \item M4-To develop technical human resources exhibiting professional and ethical attitudes.
+\end{itemize}
+\subsection*{Program Educational Objectives (PEO)}
+The PEOs of undergraduate program in Electronics and Computer Engineering are broadly classified as follows:
+\begin{enumerate}
+    \item PEO1:  Involve in design, manufacturing, integration and testing of products, 	 software and systems in the field of Electronics & Computer engineering and allied  disciplines.
+    \item PEO2: Solve engineering problems having social relevance by applying knowledge and skill sets related to Electronics and Computer engineering. 
+    \item PEO3:  Pursue higher Education/Research in the field of Engineering/Management or become a successful entrepreneur in the related areas.
+    \item PEO4: Work effectively as an individual and/or a team member of multi disciplinary assignments involving people across different cultures and national boundaries.
+\end{enumerate}
+\newpage
+\thispagestyle{empty}
+%\begin{center}
+\vspace*{50pt}
+\textbf{Program Specific Outcomes (PSO)}
+
+At the end of the program students will be able to:
+%\end{center}
+\thispagestyle{empty}
+\begin{itemize}
+    \item PSO1:  Design, test and implement electronic systems and appliances related to 		    signal processing, embedded systems, industrial automation and IoT using   	    the state-of-the-art  components and software. 
+    \item PSO2:  Architect, classify and select appropriate technologies and software’s for 	 the  implementation of computer engineering systems.
+\end{itemize}
+\subsection*{Program Outcomes (POs)}
+\begin{itemize}
+    \item PO1. Engineering knowledge:
+    Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.
+    \item PO2. Problem analysis:
+    Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.
+    \item PO3. Design/development of solutions: Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal and environmental considerations.
+    \item PO4. Conduct investigations of complex problems: Use research- based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.
+    \item PO5. Modern tool usage: Create, select and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.
+    \item PO6. The engineer and society: Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.
+    \item PO7. Environment and sustainability: Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.
+    \item PO8. Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.
+    \item PO9. Individual and team work: Function effectively as an individual and as a member or leader in diverse teams, and in multidisciplinary settings.
+    \item PO10. Communication: Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give/ receive clear instruction.
+    \item PO11. Project management and finance: Demonstrate knowledge and understand the engineering and management principles and apply these to one’s own work, as a member and leader in a team to manage projects in multidisciplinary environments.
+    \item PO12. Life-Long Learning: Recognize the need for, and have the preparation and ability to engage in independent and lifelong learning in the broadest context of technological change.
+\end{itemize}
+%Certificate
+\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+\begin{titlepage}
+\begin{center}
+%{\LARGE\textbf{\bf \textcolor{red}{CERTIFICATE}}}\\
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3cm,height=3cm]{logo}\\
+        \end{center}
+        \end{figure}
+        
+	{  Sanjivani College of Engineering, Kopargaon-423603 }\\
+ { (An Autonomous Institute)}\\
+   { DEPARTMENT OF ELECTRONICS AND COMPUTER ENGINEERING}\\
+   \vspace{0.2in}
+  {\LARGE\textbf{\bf \textcolor{green}{CERTIFICATE}}}\\
+  \vspace{0.1in}
+		{\small This is to certify that the  project entitled}\\
+		\textbf{\bf \textcolor{red}{``Name of Your Project''}}\\
+		{\small Submitted by}\\
+		\end{center}
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+{{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER1}}} &  & {{\color[HTML]{58429B} \textbf{{[}PRN{]}}}} \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER2}}                     &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER3}}                          &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER4}}                      &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                    
+\end{tabular}
+\end{table}
+
+\textbf{\textcolor{violet}}%\end{center}
+
+
+  \begin{center}
+	{\small is a bonafide work carried out by students under the supervision of\\ Guide & Co guide Names and it is submitted towards the partial fulfillment of the\\ requirement of Bachelor of Technology (ECE Engineering).\\ During the Academic Year 2023-24}\\
+  \end{center}
+	
+	 
+\vspace*{0.2in}
+\hspace*{0.6in}{\bf \textcolor{red}{Guide Name}} \hspace*{2.0in}{\bf \textcolor{red} {Prof. N. D. Kapale}}\\
+\hspace*{0.9in} [Internal Guide] \hspace*{1.8in} [ Project Co-Ordinator]\\
+% \hspace*{0.6in} [Dept. of Electronics and Computer Engg.] \hspace*{1.3in} [Dept. of Electronics and Computer Engg.]\\
+\begin{center}
+\hspace*{0.1in}{\bf \textcolor{red}{Dr. B.S. Agarkar }} \hspace*{1.9in}{\bf \textcolor{red}{Dr. A. G. Thakur}}\\
+\hspace*{0.0in} [Head of Dept.] \hspace*{2.2in} [  Director]\\
+% \hspace*{0.2in} [Dept. of Electronics and Computer Engg.] \hspace*{1.3in} [Sanjivani College of Engg.]\\
+\end{center}
+\vspace*{0.5cm}
+
+
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Examiner Certificate
+\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+\begin{titlepage}
+\begin{center}
+%{  SAVITRIBAI PHULE PUNE UNIVERSITY, PUNE }\\
+{\LARGE\textbf{\bf \textcolor{red}{SAVITRIBAI PHULE PUNE UNIVERSITY, PUNE}}}\\
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=3cm,height=3cm]{SPPULogo.png}\\
+        \end{center}
+        \end{figure}
+      
+ 
+   \vspace{0.2in}
+  {\LARGE\textbf{\bf \textcolor{green}{EXAMINER’S CERTIFICATE}}}\\
+  \vspace{0.1in}
+		{\small This is to certify that the  project entitled}\\
+		\textbf{\bf \textcolor{red}{``Name of Your Project''}}\\
+		{\small Submitted by}\\
+		\end{center}
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+{{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER1}}} &  & {{\color[HTML]{58429B} \textbf{{[}PRN{]}}}} \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER2}}                     &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER3}}                          &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER4}}                      &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                    
+\end{tabular}
+\end{table}
+
+\textbf{\textcolor{violet}}%\end{center}
+
+
+  \begin{center}
+		{\small for partial fulfillment of the requirement of the award of degree of Bachelor of Technology in Electronics & Computer  Engineering is examined and certified.}\\
+  \end{center}
+		 
+\vspace*{0.2in}
+
+\vspace*{1.5cm}
+
+
+\textcolor{blue}{\textbf{Signature of Internal Examiner}} \hspace*{1.0in} \textcolor{blue}{\textbf{Signature of External Examiner}}\\
+
+\end{titlepage}
+% Sponsore Certificate
+
+    \thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+    \begin{titlepage}
+    \begin{center}
+		{\Large\textbf{\bf {Name of Sponsorer Industry with address}}\\
+		\vspace{2.0in}}
+	
+		 {\LARGE\textbf{\bf \textcolor{red}{SPONSORER CERTIFICATE}}}\\
+		
+		\vspace{0.1in}
+  {\begin{center}
+      {\small This is to certify that the  project work entitled 
+  \end{center}}
+		\textbf{\bf \textcolor{red}{```Name of Your Project''}}\\
+		\vspace{0.1in}
+		{\small \textbf{carried out By}}\\
+		\end{center}
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+{{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER1}}} &  & {{\color[HTML]{58429B} \textbf{{[}PRN{]}}}} \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER2}}                     &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER3}}                          &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                     \\
+{\color[HTML]{58429B} \textbf{MR. GROUP MEMBER4}}                      &  & {\color[HTML]{58429B} \textbf{{[}PRN{]}}}                    
+\end{tabular}
+\end{table}
+	
+		\begin{center}
+		
+		\vspace{0.1in}
+	    \textbf{bonafied student of Sanjivani College of Engineering, Kopargaon 423 603 in partial fulfillment for the award of Bachelor of Technology in Electronics & Computer Engineering of the Savitribai Phule Pune University, Pune during the academic year 2023-2024. It is certified that they has completed the project satisfactorily.}\\
+	    \vspace{1.5in}
+	    {\small \textbf{Name & signature of Industry/Organization Authority}}\\
+    
+	   
+	    \end{center}
+
+		\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgement
+%Header And Footer
+\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+%\fancyhead[L]{\leftmark}
+\rhead[RO]{\scriptsize{\it S.P.P.U, Pune    SRES’s Sanjivani COE Kopargaon 423603  Departmentt of Electronics and Computer Engineering.  2023-2024}}
+\lfoot[LE, RO]{\scriptsize{\it Your Project Name }}
+\pagestyle{fancy}
+
+\pagenumbering{Roman}			%page number in Roman.
+\chapter*{ACKNOWLEDGEMENT}
+\paragraph{}``Write acknowledge to Guide, Co Guide, Project Coordinator, HOD,Director,Teachers and supporting staff,Friends, ,Family
+
+
+
+
+\begin{flushright}
+{
+\begin{minipage}{2.3 in}
+
+\vspace*{0.8in}
+\textbf{MR. GROUP MEBER1}\\
+\textbf{MR. GROUP MEMBER2}\\
+\textbf{MR. GROUP MEMBER3}\\
+\textbf{MR. GROUP MEMBER4}\\
+\textbf{}\\
+\vspace*{0.1in}
+\textbf{(B.TECH. ECE)}
+
+
+\end{minipage}} \hfill
+\end{flushright}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Abstract
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+
+\chapter*{ABSTRACT}
+\paragraph{}TYPE YOUR ABSTRACT HERE.
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Default Pages
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+\tableofcontents	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+
+\listoffigures
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+
+
+\newpage
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+
+
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+\listoftables
+	\thisfancypage{\setlength{\fboxsep}{10pt}\doublebox}{}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{INTRODUCTION}
+\pagenumbering{arabic}
+\section{Problem Definition}
+TYPE YOUR PROBLEM DEFINATION HERE
+
+\section{Literature Review/Relevant Theory}
+TYPE YOUR LITERATURE REVIEW/RELEVENT THEORY HERE
+
+
+\section{Scope}
+\begin{enumerate}
+\item WRITE PROJECT SCOPE1 HERE
+\item WRITE PROJECT SCOPE2 HERE
+
+\end{enumerate}
+
+\section{Objectives}
+\begin{itemize}
+ \item WRITE YOUR OBJECTIVE1 HERE
+\item WRITE YOUR OBJECTIVE 2 HERE
+\item WRITE YOUR OBJECTIVE3 HERE
+\item WRITE YOUR OBJECTIVE4 HERE
+
+\end{itemize}
+
+\chapter{OVERVIEW OF LITERATURE}
+WRITE  OVERVIEW OF LITERATURE HERE
+
+\section{Introduction }
+WRITE Literature Introduction  HERE.  
+
+
+\section{Need for Present study }
+WRITE need of project study HERE 
+
+\section{Proposed Approach}
+\begin{itemize}
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{itemize}
+
+
+\chapter{PROJECT DEFINITION AND SPECIFICATIONS}
+WRITE ABOUT SYSTEM MODEL HERE
+\section{Introduction l}
+WRITE Introduction  HERE
+
+
+
+\section{Project Definition}
+
+\subsection{The concept }
+
+
+\subsection{Definitions and notations }
+\subsection{Mathematical formulation  }
+
+\section{System Requirements}
+
+\subsection{Input and Output Specifications}
+
+\subsection{Hardware Specifications}
+
+\subsection{Software Specifications}
+
+\chapter{HARDWARE AND SOFTWARE DESIGN}
+\section{Block diagram and its explanation}
+
+
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=10cm]{4.png}}
+	\caption{Block diagram }
+\end{center}
+\end{figure}
+Various blocks  mentioned in the above diagram. 
+\begin{itemize}
+    \item {\bf  Block1}
+       
+    \item {\bf Block12}
+     
+    \item {\bf Block3 }
+   
+    \item {\bf Block4 }
+   
+\end{itemize}
+
+\section{Choice of processor and its working  }
+
+\begin{figure}[h!]
+\begin{centering}
+	\includegraphics[width=12cm]{5.jpg}
+	\caption{  Breakdown Structure (Implementation) }
+\end{centering}
+\end {figure}
+
+\section{Design Stages} 
+\subsection{Power Supply Design }
+\subsection{Design of signal conditioning circuits}
+\subsection{Design of other element/s (Optional) }
+\subsection{Circuit Diagram and its working }
+\subsection{PCB Layouts}
+
+\section{Software Design}
+
+\subsection{Task Assigned to Software }
+
+\subsubsection{Algorithm/s}
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=10cm]{9.jpg}}
+	\caption{ Algorithm/s}
+\end{center}
+\end{figure}
+
+\clearpage
+\subsubsection{Flow Chart/s	}
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=13cm]{10.jpg}}
+	\caption{Flow Chart/s	}
+\end{center}
+\end{figure}
+
+\clearpage
+
+
+\chapter{EXPERIMENTAL OBSERVATIONS AND DISCUSSION }
+\section{Experimental Observations}
+\begin{itemize}
+\item{\bf Experimental Observations}
+Observation1: 
+Observation2: 
+Observation3: 
+Observation4: 
+\end{itemize}
+
+
+\section{Discussion}
+\begin{itemize}
+    \item{\bf Discussion}
+\item Discussion1: 
+\item Discussion2: 
+\item Observation3: 
+\item Observation4: 
+\end{itemize}
+
+
+\newpage
+\chapter {CONCLUSION AND FUTURE SCOPE}
+\section{Conclusion }
+ \begin{itemize}
+ \item Conclusion1.
+ \item Conclusion2.
+ \item Conclusion3.
+ \item Conclusion4.
+ \end{itemize}
+\section{Advantages/Disadvantages}
+\subsection{Advantages}
+\begin{itemize}
+    \item Advantages1
+\item Advantages2
+\item Advantages3
+\item Advantages4
+\end{itemize}
+\subsection{Disadvantages}
+\begin{itemize}
+    \item Disadvantages1
+\item Disadvantages2
+\item Disadvantages3
+\end{itemize}
+\section{Applications}
+\begin{itemize}
+    \item Application1
+\item Application2
+\item Application3
+\end{itemize}
+\section{Future scope }
+\begin{itemize}
+    \item Future scope1
+\item Future scope2
+\item Future scope3
+\end{itemize}
+
+
+\newpage
+\chapter{TIME PLAN OF ACITIVITIES}
+
+\subsubsection{ACTIVITY PLAN}
+  \begin{figure}[h!]
+    \begin{center}
+        \fbox{\includegraphics[width=13cm]{activity.png}}
+    \end{center}
+    \end{figure}
+
+
+
+\subsubsection{Main code of  your project}
+   \begin{figure}[h!]
+    \begin{center}
+        \fbox{\includegraphics[width=13cm]{maincode1.png}}
+    \end{center}
+    \end{figure}
+
+\clearpage
+    \begin{figure}[h!]
+    \begin{center}
+        \fbox{\includegraphics[width=13cm]{maincode2.png}}
+    \end{center}
+    \end{figure}
+
+\clearpage
+
+
+
+
+\newpage
+\addcontentsline{toc}{chapter}{REFERENCES}
+\renewcommand\bibname{References}
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{1}
+
+
+\bibitem{} sample :Kansal P, Kumar P, Arya H and Methaila A,” Player valuation in Indian premier league auction using data mining technique”, International Conference on Contemporary Computing and Informatics (IC3I), 2014,197-203.
+\bibitem{}
+\bibitem{}
+\bibitem{}
+\bibitem{}
+\end{thebibliography}
+
+
+\clearpage
+\addcontentsline{toc}{chapter}{Annexure A Paper Publication}
+\begin{center}
+    \textbf{Annexure A}\\
+    \textbf{Paper Publication}
+\end{center}
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=10cm]{60.jpg}}
+        \caption{Paper Publication - Certificate 1}
+\end{center}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=10cm]{61.jpg}}
+ \caption{Paper Publication - Certificate 2}
+\end{center}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=10cm]{62.jpg}}
+ \caption{Paper Publication - Certificate 3}
+\end{center}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=10cm]{63.jpg}}
+ \caption{Paper Publication - Certificate 4}
+\end{center}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+	\fbox{\includegraphics[width=10cm]{64.jpg}}
+ \caption{Paper Publication - Certificate 5}
+\end{center}
+\end{figure}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Annexure B Project Competition} 
+\begin{center}
+    \textbf{Annexure B}\\
+    \textbf{Project Competition}
+\end{center}
+\begin{figure}[h!]
+\begin{centering}
+	\rotatebox[origin=c]{90}{\includegraphics[width=11cm]{65.jpg}}
+ \caption{Project Competition: Certificate 1}
+\end{centering}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{centering}
+	\rotatebox[origin=c]{90}{\includegraphics[width=11cm]{66.jpg}}
+ \caption{Project Competition: Certificate 2}
+\end{centering}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{centering}
+	\rotatebox[origin=c]{90}{\includegraphics[width=11cm]{67.jpg}}
+ \caption{Project Competition: Certificate 3}
+\end{centering}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{centering}
+	\rotatebox[origin=c]{90}{\includegraphics[width=11cm]{68.jpg}}
+ \caption{Project Competition: Certificate 4}
+\end{centering}
+\end{figure}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Annexure C Data sheet} 
+\begin{center}
+    \textbf{Annexure C}\\
+    \textbf{Data sheet1}
+\end{center}
+\begin{figure}[h!]
+\begin{centering}
+	\rotatebox[origin=c]{90}{\includegraphics[width=11cm]{65.jpg}}
+ \caption{Data sheet1: Name of Datasheet 1}
+\end{centering}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{centering}
+	\rotatebox[origin=c]{90}{\includegraphics[width=11cm]{66.jpg}}
+ \caption{Data sheet2: Name of Datasheet 2}
+
+\end{centering}
+\end{figure}
+
+
+
+
+\end{document}
+source.txt
+Displaying source.txt.

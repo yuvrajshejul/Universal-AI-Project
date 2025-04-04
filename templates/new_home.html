@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Homepage</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='uploads/ayur.jpg') }}");
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #add8e6;
+            padding: 10px 0;
+
+            box-shadow: 5px 5px 5px black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        .logo img {
+            width: 100px;
+            /* Adjust the width as needed */
+            height: auto;
+            /* Maintain the aspect ratio */
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: ;
+        }
+
+        .hero-section {
+            background-image: url({{url_for('static',filename='uploads/ayur.jpg')}});
+            background-size: cover;
+            background-position: center;
+            color: #000;
+            /* Change text color to black */
+            text-align: center;
+            padding: 100px 0;
+            height: 500px;
+            /* Set the height to 500px */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .login-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-button {
+            display: inline-block;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #45a049;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #000;
+            /* Change h1 color to black */
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgb(238, 174, 202);
+            background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 160, 233, 1) 100%);
+            margin: 20px auto;
+            /* Adjusted margin for centering */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            max-width: 300px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: Blue;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: black;
+            margin-bottom: 15px;
+        }
+
+        .card-button {
+            display: inline-block;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .card-button:hover {
+            background-color: #45a049;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    <nav>
+        <div class="logo"><img src="{{url_for('static', filename='uploads/logo-no-background.png')}}" alt="Logo"></div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="{{ url_for('scheme')}}">Schemes</a></li>
+            <li><a href="{{ url_for('hospit')}}">Nearest Hospital</a></li>
+        </ul>
+        {% if 'username' in session %}
+            <div class="login-buttons">
+                <span style="margin-right: 10px; color: white;">Welcome, {{ session['username'] }}</span>
+                <a href="{{ url_for('logout') }}" class="login-button">Logout</a>
+            </div>
+        {% endif %}
+    </nav>
+</header>
+
+
+   <div class="card">
+        <!-- Replace with your health-related image URL or path -->
+        <div class="card-content">
+            <h2>Have Questions About Your Health?</h2>
+            <p>If you have any queries about your health, our experts are here to help. Explore our range of services, including personalized health assessments, nutrition consultations, and fitness plans.</p>
+            <a href="{{ url_for('chatbot') }}" class="card-button">Let's Chat</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
