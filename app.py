@@ -11,8 +11,8 @@ app = Flask(__name__)
 translator = GoogleTranslator(source='auto', target='hi')
 
 # Set up the Groq API
-os.environ['GROQ_API_KEY'] = "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"
-client = Groq()
+#os.environ['GROQ_API_KEY'] = "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"
+#client = Groq()
 
 #####################################################################
 # Navigation bar
